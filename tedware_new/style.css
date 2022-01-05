@@ -1,0 +1,90 @@
+/*
+    Theme Name: TEDWARE-NEW
+    Author: tedware@outlook.com
+    Version: 1.0
+*/
+
+*::-webkit-scrollbar {display: none;}
+* {-ms-overflow-style: none; scrollbar-width: none;}
+
+html, body {width: 100%; height: 100%;}
+html, body, div, ul, li, p {margin: 0; padding: 0; box-sizing: border-box; display: block; letter-spacing: 0;}
+ul, li {list-style: none;}
+a, a:link, a:visited, a:active, a:hover {text-decoration: none; word-break: break-all;}
+img {vertical-align: bottom;} /* img 여분의 공백 없애기 */
+
+.on {display: block;}
+.off {display: none;}
+
+/* 애드센스 */
+#ad-sidebar,
+#ad-sidebar2,
+#ad-top,
+#ad-bottom {text-align: center;}
+.responsive-size {width: 336px; height: 280px; margin: 0; line-height: 0;}
+.small-size {width: 300px; height: 250px;}
+@media screen and (min-width: 768px) {
+    .responsive-size {width: 728px; height: 90px;}
+}
+@media screen and (min-width: 1024px) {
+    .responsive-size {width: 970px; height: 250px;}
+}
+
+#layout-outer {max-width: 1366px; min-height: 100vh; margin: 0 auto; font-family: "hn", monospace; font-size: 18px; font-weight: normal; background-color: #f0f8ff;}
+#layout-outer:before, #layout-outer:after {content: " "; display: table;}
+#layout-left {width: 360px; background-color: rgb(80, 95, 130); position: fixed; top: 0; bottom: 0; height: 100%; overflow-y: scroll; z-index: 1; transition: .25s ease-in-out;}
+#layout-right {max-width: 1036px; margin-left: 360px; height: 100%;}
+#layout-right:before, #layout-right:after {content: " "; display: table;}
+
+#sidebar {color: #fafafa; padding: 10px;}
+#sidebar a,
+#sidebar a:link,
+#sidebar a:visited,
+#sidebar a:active,
+#sidebar a:hover {color: #fff;}
+#sidebar > div {margin: 40px 0;}
+#header-title {text-align: center; font-size: 24px;}
+#header-title a {position: relative;}
+#header-title a:after {content:"\f27b"; font-family: "FontAwesome"; font-size: 24px; position: absolute; top: -10px; right: -30px;}
+#search {text-align: center; padding: 5px; background-color: rgba(255, 255, 255, .1); border-radius: 5px;}
+#search input {width: 95%; height: 30px; text-align: center; color: #fff; background-color: transparent; outline: none; border: none;}
+#search input::placeholder {color: #bbb;}
+#sidebar .cp-title {margin: 5px 0 5px 5px;}
+#sidebar .cp-title:before {content:"\f067"; font-family: "FontAwesome"; display: inline-block; text-align: left; width: 24px;}
+#sidebar .cp-title #count {color: rgb(255, 69, 0);}
+#sidebar .cp-list {background-color: rgba(255, 255, 255, .1); border-radius: 5px; padding: 5px;}
+#sidebar .cp-list li {margin: 5px 0 5px 40px;}
+#sidebar .cp-list li span {cursor: pointer;}
+#sidebar .cp-list li.non-current {color: #bbb;}
+#sidebar .cp-list li.non-current a {color: #bbb;}
+#sidebar .cp-list li.non-current:before {content:"-"; display: inline-block; text-align: left; width: 24px; margin-left: -24px;}
+#sidebar .cp-list li.current:before {content:"\f115"; font-family: "FontAwesome"; display: inline-block; text-align: left; width: 24px; margin-left: -24px;}
+#post-list ul {height: 240px; overflow-y: scroll;}
+
+
+#main {color: #333; padding: 20px;}
+
+#menu-button {position: fixed; bottom: 30px; right: 30px; width: 40px; height: 30px; display: none; z-index: 10;}
+#menu-button span {display: block; position: absolute; height: 6px; width: 100%; background-color: #000; border-radius: 6px; left: 0; transition: .25s ease-in-out; transform: rotate(0deg);}
+#menu-button span:nth-child(1) {top: 0; transform-origin: left;}
+#menu-button span:nth-child(2) {top: 12px; transform-origin: left;}
+#menu-button span:nth-child(3) {top: 24px; transform-origin: left;}
+#menu-button.open span {background-color: #fff;}
+#menu-button.open span:nth-child(1) {top: -2px; left: 6px; transform: rotate(45deg);}
+#menu-button.open span:nth-child(2) {width: 0; opacity: 0;}
+#menu-button.open span:nth-child(3) {top: 26px; left: 6px; transform: rotate(-45deg);}
+
+
+#reply {padding: 20px;}
+
+#footer-msg {font-size: 20px; line-height: 24px; margin: 32px 0; text-align: center;}
+
+
+@media screen and (max-width: 1024px) {
+	#layout-left {transform: translatex(-100%); }
+	#layout-left.open{transform: translatex(0px); width: 100%}
+	#layout-right {margin-left: 0; width: 100%}
+	#menu-button {display: block;}
+}
+
+html.open {overflow-y: hidden; position: fixed;}
